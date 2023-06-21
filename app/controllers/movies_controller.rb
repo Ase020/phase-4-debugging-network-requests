@@ -6,10 +6,10 @@ class MoviesController < ApplicationController
     render json: movies
   end
 
-  # def create
-  #   movie = Movie.create(movie_params)
-  #   render json: movie, except: [:created_at, :updated_at], status: :created
-  # end
+  def create
+    movie = Movie.create(movie_params)
+    render json: movie, except: [:created_at, :updated_at], status: :created
+  end
 
 
   private
